@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     android:orientation="vertical">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -9,39 +11,59 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="8dp" />
+        android:clipToPadding="false"
+        android:padding="16dp" />
 
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp">
+        android:layout_margin="8dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="24dp">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/message_input_layout"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/chat_label">
+            android:orientation="horizontal"
+            android:padding="12dp">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/message_input"
-                android:layout_width="match_parent"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/message_input_layout"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:inputType="textCapSentences|textMultiLine"
-                android:maxLines="4" />
+                android:layout_weight="1"
+                android:hint="@string/chat_label"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusTopStart="20dp"
+                app:boxStrokeWidth="0dp"
+                app:boxBackgroundColor="@color/surfaceVariant">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/message_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:maxLines="4"
+                    android:textSize="16sp"
+                    android:padding="12dp" />
 
-        <ImageButton
-            android:id="@+id/send_button"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_gravity="bottom"
-            android:layout_marginStart="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="@string/action_send"
-            android:src="@android:drawable/ic_menu_send" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    </LinearLayout>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/send_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/action_send"
+                app:fabSize="mini"
+                app:tint="@color/onPrimary"
+                app:backgroundTint="?attr/colorPrimary"
+                app:srcCompat="@android:drawable/ic_menu_send" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 </LinearLayout> 

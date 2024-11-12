@@ -1,9 +1,42 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.LLMChatApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.LLMChatApp" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Colors -->
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorPrimaryDark">#1976D2</item>
+        <item name="colorPrimaryContainer">#1E293B</item>
+        <item name="colorOnPrimaryContainer">#E1F5FE</item>
+        <item name="colorSecondary">#03A9F4</item>
+        <item name="colorSecondaryContainer">#0D1B2A</item>
+        <item name="colorOnSecondaryContainer">#E1F5FE</item>
+        <item name="android:colorBackground">#121212</item>
+        <item name="colorSurface">#1E1E1E</item>
+        <item name="colorSurfaceVariant">#262626</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorOnSurface">#FFFFFF</item>
+        <item name="colorOnSurfaceVariant">#B3FFFFFF</item>
+        <item name="colorOnBackground">#FFFFFF</item>
+        <item name="colorError">#CF6679</item>
+        <item name="colorOnError">#000000</item>
+        <item name="colorOutline">#3DFFFFFF</item>
+
+        <!-- Text Appearances -->
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.LLMChatApp.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.LLMChatApp.BodyMedium</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.LLMChatApp.BodySmall</item>
     </style>
 
-    <style name="Theme.LLMChatApp" parent="Base.Theme.LLMChatApp" />
+    <!-- Custom text appearances -->
+    <style name="TextAppearance.LLMChatApp.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/onSurface</item>
+    </style>
+
+    <style name="TextAppearance.LLMChatApp.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/onSurface</item>
+    </style>
+
+    <style name="TextAppearance.LLMChatApp.BodySmall" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">@color/onSurfaceVariant</item>
+    </style>
 </resources>
